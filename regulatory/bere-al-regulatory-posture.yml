@@ -1,0 +1,24 @@
+generated: '2026-10-21'
+method: probed
+source:
+  - url: https://bereal.com/privacy
+    http_status: 200
+    fetched: "true"
+    note: Privacy Policy page
+signals:
+  data_retention:
+    evidence:
+      - source: https://bereal.com/privacy
+        http_status: 200
+        fetched: "true"
+        quote: "This data is kept for a maximum of 90 days from the time of collection and is then automatically deleted."
+        section: "UX Interaction Recordings"
+    note: Retains interaction recordings for 90 days.
+  age_assurance:
+    evidence:
+      - source: https://bereal.com/privacy
+        http_status: 200
+        fetched: "true"
+        quote: "Please also remember that BeReal is not meant to be used if you are under 13."
+        section: "Privacy Policy"
+    note: Indicates age restriction for users.

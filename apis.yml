@@ -1,26 +1,78 @@
 aid: bere-al
+
 name: BeReal
+
+image: https://framerusercontent.com/images/xP59bejPGkz1FlgVZnefYlWr4.png
+
 description: 'BeReal is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by accel, coatue) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bere-al/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: Vendors
+  url: vendors/bere-al-vendors.yml
+- type: Hosts
+  url: hosts/bere-al-hosts.yml
+- type: TermsOfService
+  url: https://bereal.com/terms
+- type: Support
+  url: https://help.bereal.com/hc/en-us
+- type: PrivacyPolicy
+  url: https://bereal.com/privacy
+- type: Newsroom
+  url: https://bereal.com/news
+- type: Documentation
+  url: https://help.bereal.com/
+- type: DomainSecurity
+  url: security/bere-al-domain-security.yml
+- type: Website
+  url: https://bere.al/en
+
+apis: []
+
 x-backed-by:
 - accel
 - coatue
-common:
-- type: Website
-  url: https://bere.al/en
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-21'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://help.bereal.com/mcp
+    status: 401
+  - url: https://bere.al/en
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
